@@ -87,7 +87,34 @@
     <p>To delete a branch that is no longer needed, you can use the command <code>git branch -d branchname</code> for a local branch or <code>git push origin --delete branchname</code> for a remote branch. This will remove the specified branch from your repository. After merging <b>workout branch</b>, we can now delete it, as its of no use.</p>
     <img src="images/git-delete-branch.png" alt="Git Delete Branch">
     <figcaption><i>deleting workout branch</i></figcaption>
-    
+    <h2>Create a github repository</h2>
+    <p>You can create  <a href="https://github.com/new" alt="create new repository" target="_blank"> new repository </a> by following these steps: </p>
+    <ol>
+        <li>Click on the "+" icon in the top right corner of the GitHub homepage and select "New repository".</li>
+        <li>Enter a name for your repository, a description, and choose whether it should be public or private.</li>
+        <li>Click on the "Create repository" button to create your new repository.</li>
+    </ol>
+    <img src="images/git-hub.png" alt="Github Repository">
+    <figcaption><i>creating a new repository on GitHub</i></figcaption>
+
+    <h2>Pushing changes to a remote repository</h2>
+   
+    <h3>Locating your remote link of the new  repository.</h3>
+    <p>Navigate to your new repository, then click the green button labeled "Code", select "HTTPS", and copy the link.</p>
+    <img src="images/git-remote-link.png" alt="Git Remote">
+    <figcaption><i>Locating the remote link to push local repository</i></figcaption>
+
+    <h3>Adding a remote link to a local repository</h3>
+    <p>Before pushing changes to a remote repository, you need to add and commit all changes, then add the remote repository as a remote link to your local repository by using the command <code>git remote add origin remotelink</code>, where <code>remotelink</code> is the URL of the remote repository on GitHub. This will add the remote repository as a remote link named "origin" to your local repository.</p>
+    <img src="images/git-remote.png" alt="Git Remote Add">
+    <figcaption><i>adding a remote link to a local repository</i></figcaption>
+
+    <h3>Pushing changes to a remote repository</h3>
+    <p>To push changes from your local repository to a remote repository on GitHub, you can use the command <code>git push origin branchname</code>, where <code>branchname</code> is the name of the branch you want to push. This will upload your changes to the remote repository and make them available to other developers.</p>
+    <p>
+    <img src="images/git-push.png" alt="Git Push">
+    <figcaption><i>pushing changes to a remote repository on GitHub</i></figcaption>
+
     <h1>More Topics</h1>
     <h2>Next Steps</h2>
     <p>Now that you have a good understanding of the basics of Git, here are some next steps you can take to further enhance your skills:</p>
@@ -109,14 +136,5 @@
     </ul>
     <p>By using these commands, developers can work together on a project, review each other's code, and ensure that changes are integrated smoothly into the codebase.</p>
 
-    <h2>Deploy Your Page</h2>
-    <p>To deploy your page to Vercel, follow these steps:</p>
-    <ol>
-        <li>Sign up for a free account on <a href="https://vercel.com/" target="_blank">Vercel.com</a>.</li>
-        <li>Install the Vercel CLI by running <code>npm install -g vercel</code> in your terminal.</li>
-        <li>Navigate to your project directory and run <code>vercel</code> to deploy your project.</li>
-        <li>Follow the prompts to complete the deployment process.</li>
-    </ol>
-    <p>Once deployed, you will receive a URL where your page is live and accessible to others.</p>
 </body>
 </html>
