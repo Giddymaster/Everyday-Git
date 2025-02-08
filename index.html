@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Git</title>
+</head>
+<body>
+    <h1>What is Git</h1>
+    <p>Git is a version control system that allows you to manage and keep track of your source code history. It is a distributed version control system, which means that the entire codebase and its history are available on every developer's computer, which allows for easy branching and merging.A Version Control System (VCS) is a tool that helps developers track changes in their code over time. It enables them to:
+        <ul>
+            <li>Keep track of changes made to the code.</li>
+            <li>Collaborate with other developers.</li>
+            <li>Revert to previous versions in case of errors.</li>
+            <li>Work on different features simultaneously without conflicts.</li>
+        </ul>
+
+    There are other version control systems like Subversion, Mercurial, and Perforce, but Git is the most popular and widely used among developers.</p>
+    </p>
+    
+    <h2>Installing Git</h2>
+    <p>Before you start using Git, you have to set up a development environment. You need to install Git on your computer and configure it with your name and email address. You can do this by:</p>
+    <p>First download Git from <a href="https://git-scm.com/" target="_blank">Download Git</a></p>
+
+    <h2>Configuring Git</h2>
+    <p>Open cmd/terminal and type <code>git --version </code> command to confirm git is successfully installed in your machine</p>
+    <p>Create a new folder and open it in terminal to run the following commands to set your name and email address:
+        <pre>
+            <code>git config --global user.name "Your Name"</code>
+            <code>git config --global user.email "</code>
+        </pre>
+    as shown below:
+    </p>
+    <img src="images/git-setup.png" alt="Git Setup">
+    <figcaption><i>checking if git is installed on your machine and setting your username and email</i></figcaption>
+    <p>Now you are ready to start using Git.</p>
+
+    <h2>Creating a New Repository</h2>
+    <p>To create a new Git repository, you need to open the terminal, navigate to your project directory, and run the following command:</p>
+    <pre>
+        <code>git status</code> to check the status of your repository
+        <code>git init</code> to initialize a new Git repository
+    </pre>
+    <p>This command will create a new Git repository in your project directory. You can then start tracking your project files using Git.</p>
+    <img src="images/git-init.png" alt="Git Init">
+    <figcaption><i>initializing a new Git repository</i></figcaption>
+
+    <h2>Adding files to the staging area</h2>
+    <p>After creating a new Git repository, you need to add your project files to the staging area. The staging area is a place where you can group files together before committing them to the repository. This allows you to organize and review changes before they become part of the project history. To add files to the staging area, use the command <code>git add filename</code> for a specific file or <code>git add .</code> to add all files.</p>
+    <p>Tracked files are files that Git is aware of and is tracking for changes, while untracked files are files that Git is not yet tracking. You can see the status of your files by using the <code>git status</code> command, which will show you which files are tracked, untracked, or staged for commit.</p>
+
+
+    
+</body>
+</html>
