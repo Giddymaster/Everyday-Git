@@ -20,7 +20,7 @@
     
     <h2>Installing Git</h2>
     <p>Before you start using Git, you have to set up a development environment. You need to install Git on your computer and configure it with your name and email address. You can do this by:</p>
-    <p>First download Git from <a href="https://git-scm.com/" target="_blank">Download Git</a></p>
+    <p>First download Git from <a href="https://git-scm.com/" target="_blank">Download Git.</a> </p>
 
     <h2>Configuring Git</h2>
     <p>Open cmd/terminal and type <code>git --version </code> command to confirm git is successfully installed in your machine</p>
@@ -48,8 +48,75 @@
     <h2>Adding files to the staging area</h2>
     <p>After creating a new Git repository, you need to add your project files to the staging area. The staging area is a place where you can group files together before committing them to the repository. This allows you to organize and review changes before they become part of the project history. To add files to the staging area, use the command <code>git add filename</code> for a specific file or <code>git add .</code> to add all files.</p>
     <p>Tracked files are files that Git is aware of and is tracking for changes, while untracked files are files that Git is not yet tracking. You can see the status of your files by using the <code>git status</code> command, which will show you which files are tracked, untracked, or staged for commit.</p>
+    <img src="images/git-add.png" alt="Git Add">
+    <figcaption><i>before and after adding files to the staging area</i></figcaption>
 
+    <h2>Committing changes</h2>
+    <p>After adding files to the staging area, you need to commit the changes to the repository. A commit is a snapshot of your project at a specific point in time. It records the changes you have made to the project files and stores them in the repository's history. To commit changes, use the command <code>git commit -m "commit message"</code>, where the commit message describes the changes you have made.</p>
+    <img src="images/git-commit.png" alt="Git Commit">
+    <figcaption><i>committing changes to the repository</i></figcaption>
 
+    <h1>Branches</h1>
+    <p>Branches in Git are essential for managing different lines of development within a project. They allow developers to work on new features, bug fixes, or experiments in isolation from the main codebase. This means that changes can be made and tested without affecting the stable version of the project. Once the work on a branch is complete and tested, it can be merged back into the main branch, ensuring a smooth and organized workflow.</p>
+    <p>There are two types of branches in Git:  
+        <ol>
+            <li>Local branches - They exist on your local machine and are used for development work.</li>
+            <li>Remote branches - They exist on a remote repository on GitHub and are used for collaboration and sharing code with other developers.</li>
+        </ol> 
+    </p>
+    <h2>Creating a branch</h2>
+    <p>To create a new branch in Git, you can use the command <code>git branch branchname</code>. This will create a new branch with the specified name.</p>
     
+    <h2>Viewing all branches</h2>
+    <p>To view all branches in a Git repository, you can use the command <code>git branch</code>. This will list all the branches in the repository and highlight the active branch with an asterisk (*) next to its name.</p>
+    <img src="images/git-branch.png" alt="Git Branch">
+    <figcaption><i>listing all branches and showing the active branch</i></figcaption>
+
+    <h2>Switching active branches</h2>
+    <p>To switch to a different branch, you can use the command <code>git checkout branchname</code> or <code>git switch branchname</code>. This will change the active branch to the specified branch.</p>
+    <img src="images/git-switch-branch.png" alt="Git Switch Branch">
+    <figcaption><i>switching  from active master branch to giddymaster/gitquiz2 branch then workout branch using git switch and git checkout</i></figcaption>
+
+    <h2>Merging a branch</h2>
+    <p>To merge changes from one branch into another, you first need to switch to the branch you want to merge into. Then, use the command <code>git merge branchname</code>, where <code>branchname</code> is the name of the branch you want to merge from.
+    </p>
+    <img src="images/git-merge.png" alt="Git Merge">
+    <figcaption><i>merging workout branch into master branch -the current branch</i></figcaption>
+
+    <h2>Deleting a branch</h2>
+    <p>To delete a branch that is no longer needed, you can use the command <code>git branch -d branchname</code> for a local branch or <code>git push origin --delete branchname</code> for a remote branch. This will remove the specified branch from your repository. After merging <b>workout branch</b>, we can now delete it, as its of no use.</p>
+    <img src="images/git-delete-branch.png" alt="Git Delete Branch">
+    <figcaption><i>deleting workout branch</i></figcaption>
+    
+    <h1>More Topics</h1>
+    <h2>Next Steps</h2>
+    <p>Now that you have a good understanding of the basics of Git, here are some next steps you can take to further enhance your skills:</p>
+    <ul>
+        <li><b>Learn about GitHub:</b> GitHub is a web-based platform that uses Git for version control. It provides additional features for collaboration, such as pull requests, issues, and project management tools. You can start by creating a GitHub account and exploring public repositories.</li>
+        <li><b>Explore advanced Git commands:</b> There are many advanced Git commands and techniques that can help you manage your projects more effectively. Some topics to explore include rebasing, cherry-picking, and stashing.</li>
+        <li><b>Understand Git workflows:</b> Different teams use different workflows to manage their projects. Some common workflows include Git Flow, GitHub Flow, and GitLab Flow. Learning about these workflows can help you choose the best one for your team.</li>
+        <li><b>Practice collaboration:</b> Collaborate with other developers on open-source projects or within your team. This will help you get comfortable with branching, merging, and resolving conflicts.</li>
+        <li><b>Automate tasks with Git hooks:</b> Git hooks are scripts that run automatically in response to certain events in the Git lifecycle. They can be used to automate tasks such as running tests, formatting code, or sending notifications.</li>
+    </ul>
+    <p>Git is a powerful tool for collaboration, allowing multiple developers to work on the same project simultaneously. It provides features like branching, merging, and pull requests that make it easy to manage and review changes made by different team members. Here are some common Git commands used for collaboration:</p>
+    <ul>
+        <li><code>git clone</code> - Clone a remote repository to your local machine.</li>
+        <li><code>git pull</code> - Fetch changes from a remote repository and merge them into your local branch.</li>
+        <li><code>git push</code> - Push changes from your local branch to a remote repository.</li>
+        <li><code>git fetch</code> - Download changes from a remote repository without merging them into your local branch.</li>
+        <li><code>git merge</code> - Merge changes from one branch into another.</li>
+        <li><code>git pull request</code> - Create a pull request to propose changes to a repository.</li>
+    </ul>
+    <p>By using these commands, developers can work together on a project, review each other's code, and ensure that changes are integrated smoothly into the codebase.</p>
+
+    <h2>Deploy Your Page</h2>
+    <p>To deploy your page to Vercel, follow these steps:</p>
+    <ol>
+        <li>Sign up for a free account on <a href="https://vercel.com/" target="_blank">Vercel.com</a>.</li>
+        <li>Install the Vercel CLI by running <code>npm install -g vercel</code> in your terminal.</li>
+        <li>Navigate to your project directory and run <code>vercel</code> to deploy your project.</li>
+        <li>Follow the prompts to complete the deployment process.</li>
+    </ol>
+    <p>Once deployed, you will receive a URL where your page is live and accessible to others.</p>
 </body>
 </html>
